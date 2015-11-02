@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ADO_database_project.Data.Config;
+using ADO_database_project.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using ADO_database_project.Data.Config;
-using ADO_database_project.Models;
 
 namespace ADO_database_project.Data.EmployeeRepository
 {
@@ -17,7 +17,7 @@ namespace ADO_database_project.Data.EmployeeRepository
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "select e1.EmployeeID, e1.FirstName, e1.LastName, " +
-                                    "e1.Title, e1.BirthDate, e2.FirstName AS ManagerFirstName, " +
+                                    "e1.Title, e1.BirthDate, e1.City, e2.FirstName AS ManagerFirstName, " +
                                     "e2.LastName AS ManagerLastName, e1.ReportsTo " +
                                     "FROM Employees e1 " +
                                     "LEFT JOIN Employees e2 ON e1.ReportsTo = e2.EmployeeID";
@@ -103,6 +103,7 @@ namespace ADO_database_project.Data.EmployeeRepository
             employee.LastName = dr["LastName"].ToString();
             employee.FirstName = dr["FirstName"].ToString();
             employee.Title = dr["Title"].ToString();
+            employee.City = dr["City"].ToString();
 
             if (dr["BirthDate"] != DBNull.Value)
                 employee.BirthDate = (DateTime)dr["BirthDate"];
@@ -140,12 +141,17 @@ namespace ADO_database_project.Data.EmployeeRepository
                 {
                     while (dr.Read())
                     {
-                        employee = PopulateFromDataReader(dr);
+                        employee.EmployeeId = (int)dr["EmployeeID"];
+                        employee.LastName = dr["LastName"].ToString();
+                        employee.FirstName = dr["FirstName"].ToString();
+                        //employee.Territory = dr["TerritoryDescription"].ToString();
                     }
                 }
             }
 
             return employee;
         }
+
+       
     }
 }

@@ -3,3 +3,8 @@ c:\users\apprentice\documents\visual studio 2015\Projects\ADO_database_project\A
 c:\users\apprentice\documents\visual studio 2015\Projects\ADO_database_project\ADO_database_project.Models\obj\Debug\ADO_database_project.Models.csprojResolveAssemblyReference.cache
 c:\users\apprentice\documents\visual studio 2015\Projects\ADO_database_project\ADO_database_project.Models\obj\Debug\ADO_database_project.Models.dll
 c:\users\apprentice\documents\visual studio 2015\Projects\ADO_database_project\ADO_database_project.Models\obj\Debug\ADO_database_project.Models.pdb
+C:\_repos\ADO_database_project\ADO_database_project\ADO_database_project.Models\bin\Debug\ADO_database_project.Models.dll
+C:\_repos\ADO_database_project\ADO_database_project\ADO_database_project.Models\bin\Debug\ADO_database_project.Models.pdb
+C:\_repos\ADO_database_project\ADO_database_project\ADO_database_project.Models\obj\Debug\ADO_database_project.Models.csprojResolveAssemblyReference.cache
+C:\_repos\ADO_database_project\ADO_database_project\ADO_database_project.Models\obj\Debug\ADO_database_project.Models.dll
+C:\_repos\ADO_database_project\ADO_database_project\ADO_database_project.Models\obj\Debug\ADO_database_project.Models.pdb

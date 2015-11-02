@@ -17,6 +17,6 @@ namespace ADO_database_project.Models
         public DateTime? BirthDate { get; set; }
         public int? ReportsTo { get; set; }
         public string ManagerName { get; set; }
-        public string Territory { get; set; }
+        public string City { get; set; }
     }
 }

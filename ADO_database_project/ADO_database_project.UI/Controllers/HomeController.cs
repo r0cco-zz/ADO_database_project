@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using ADO_database_project.Data.EmployeeRepository;
+﻿using ADO_database_project.Data.EmployeeRepository;
 using ADO_database_project.Models;
+using ADO_database_project.UI.Models;
+using System.Web.Mvc;
 
 namespace ADO_database_project.UI.Controllers
 {
     public class HomeController : Controller
     {
-        EmployeeRepository repo;
+        private EmployeeRepository repo;
 
         public HomeController()
         {
@@ -36,6 +33,15 @@ namespace ADO_database_project.UI.Controllers
             emp = repo.GetById(emp.EmployeeId);
 
             return View("Result", emp);
+        }
+
+        public ActionResult SelectEmployeeByCity()
+        {
+            EmployeesCitiesVM vmodel = new EmployeesCitiesVM();
+            vmodel.listOfCities = vmodel.GetAllCities();
+
+
+            return View(vmodel);
         }
 
         public ActionResult About()

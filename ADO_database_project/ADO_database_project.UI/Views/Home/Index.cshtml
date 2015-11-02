@@ -11,66 +11,66 @@
     <hr />
     @foreach (var emp in Model)
     {
-    <dl class="dl-horizontal">
-        <dd>
-            ID: @emp.EmployeeId
+        <dl class="dl-horizontal">
+            <dd>
+                ID: @emp.EmployeeId
+            </dd>
+
+            <dd>
+                @emp.FirstName
+            </dd>
+
+            <dd>
+                @emp.LastName
+            </dd>
+
+            <dd>
+                @emp.Title
         </dd>
 
         <dd>
-            @emp.FirstName
-        </dd>
-
-        <dd>
-            @emp.LastName
-        </dd>
-
-        <dd>
-            @emp.Title
-        </dd>
-
-        <dd>
-            Birthday: @string.Format("{0:MM/dd}",emp.BirthDate)
+            Birthday: @string.Format("{0:MM/dd}", emp.BirthDate)
         </dd>
         @*<dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.BirthDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReportsTo)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReportsTo)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReportsTo)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReportsTo)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ManagerName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ManagerName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ManagerName)
-        </dd>*@
+            <dd>
+                @Html.DisplayFor(model => model.ManagerName)
+            </dd>*@
     </dl>}
 </div>
 
-    @Html.ActionLink("Search for user info by ID", "GetID")
+@Html.ActionLink("Search for user info by ID", "GetID")
 @*<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
+        @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
