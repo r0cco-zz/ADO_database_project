@@ -1,0 +1,68 @@
+﻿@model List<ADO_database_project.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Employees</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    @foreach (var emp in Model)
+    {
+    <dl class="dl-horizontal">
+        <dd>
+            @emp.EmployeeId
+        </dd>
+
+        <dd>
+            @emp.LastName
+        </dd>
+
+        <dd>
+            @emp.FirstName
+        </dd>
+        @*<dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportsTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportsTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManagerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManagerName)
+        </dd>*@
+    </dl>}
+</div>
+
+    @Html.ActionLink("Search for user info by ID", "GetID")
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
