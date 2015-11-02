@@ -13,7 +13,11 @@
     {
     <dl class="dl-horizontal">
         <dd>
-            @emp.EmployeeId
+            ID: @emp.EmployeeId
+        </dd>
+
+        <dd>
+            @emp.FirstName
         </dd>
 
         <dd>
@@ -21,7 +25,11 @@
         </dd>
 
         <dd>
-            @emp.FirstName
+            @emp.Title
+        </dd>
+
+        <dd>
+            Birthday: @string.Format("{0:MM/dd}",emp.BirthDate)
         </dd>
         @*<dd>
             @Html.DisplayFor(model => model.FirstName)
