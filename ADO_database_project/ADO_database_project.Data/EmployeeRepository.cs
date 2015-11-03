@@ -126,7 +126,7 @@ namespace ADO_database_project.Data.EmployeeRepository
             using (var cn = new SqlConnection(Settings.ConnectionString))
             {
                 var cmd = new SqlCommand();
-                cmd.CommandText = "select e.EmployeeID, e.FirstName, e.LastName, t.TerritoryDescription" +
+                cmd.CommandText = "select e.EmployeeID, e.FirstName, e.City, e.LastName, t.TerritoryDescription" +
                     "from EmployeeTerritories et" +
                     "inner join Employees e" +
                     "on e.EmployeeID = et.EmployeeID" +
