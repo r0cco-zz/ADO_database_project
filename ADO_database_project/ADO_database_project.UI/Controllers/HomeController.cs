@@ -57,5 +57,12 @@ namespace ADO_database_project.UI.Controllers
 
             return View();
         }
+
+        //public ActionResult CityResult()
+        //{
+        //    Employee emp = new Employee;
+        //    emp.City = 
+        //    return View(emp);
+        //}
     }
 }

@@ -72,7 +72,7 @@ namespace ADO_database_project.Data.EmployeeRepository
             {
                 var cmd = new SqlCommand();
                 cmd.CommandText = "select e1.EmployeeID, e1.FirstName, e1.LastName, " +
-                                    "e1.Title, e1.BirthDate, e2.FirstName AS ManagerFirstName, " +
+                                    "e1.Title, e1.BirthDate, e1.City, e2.FirstName AS ManagerFirstName, " +
                                     "e2.LastName AS ManagerLastName, e1.ReportsTo " +
                                     "FROM Employees e1 " +
                                     "LEFT JOIN Employees e2 ON e1.ReportsTo = e2.EmployeeID " +
