@@ -8,14 +8,24 @@
 
 <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Dropdown
+        Cities
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
         @foreach (string city in Model.listOfCities)
         {
-            <li><a href="#">@city</a></li>
+            if (Model.listOfCities.Contains(city))
+            {
+                <li><a href="#">@city</a></li>
+            }
         }
 
     </ul>
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<div>
+    @Html.ActionLink("Search for user info by ID", "GetID")
 </div>

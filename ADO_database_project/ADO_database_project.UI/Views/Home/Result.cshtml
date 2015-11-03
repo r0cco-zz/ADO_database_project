@@ -10,3 +10,10 @@
 <p>@Model.LastName</p>
 <p>ID no : @Model.EmployeeId</p>
 <p>Manager ID : @Model.ReportsTo</p>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<div>
+    @Html.ActionLink("Search employees by city", "SelectEmployeeByCity")
+</div>

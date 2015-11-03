@@ -44,6 +44,26 @@ namespace ADO_database_project.UI.Controllers
             return View(vmodel);
         }
 
-       
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        //public ActionResult CityResult()
+        //{
+        //    Employee emp = new Employee;
+        //    emp.City = 
+        //    return View(emp);
+        //}
+
     }
 }
